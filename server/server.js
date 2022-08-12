@@ -32,7 +32,7 @@ app.get("/api/v1/restaurants/:id", async (req, res) => {
     console.log(req.params.id);
 
     try {
-        const restaurant = await db.query(
+        const results = await db.query(
             "select * from restaurants where id = $1", 
             [req.params.id]
             );
@@ -125,9 +125,10 @@ app.delete("/api/v1/restaurants/:id", async (req, res) => {
 
 
 app.post('/api/v1/restaurants/:id/addReview', async (req, res) => {
+   
     try{
-       const newReview= await db.query('INSERT INTO reviews (restaurant_id, name, review, rating) values ($1, $2,
-         $3, $4) returning *;', [req.params.id, req.body.name, req.body.review, req.body.rating])
+       const newReview= await db.query('INSERT INTO reviews (restaurant_id, name, review, rating) values ($1, $2, $3, $4) returning *;', 
+       [req.params.id, req.body.name, req.body.review, req.body.rating])
          res.status(201).json({
             status: 'success',
             data: {

@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 
 const AddReview = () => {
-
   const [name, setName] = useState('')
   const [reviewText, setReviewText] = useState('')
   const [rating, setRating] = useState('Rating')
 
-  const handle
+  //const handle
 
   return (
     <div className='mb-2'>

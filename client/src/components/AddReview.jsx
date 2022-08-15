@@ -3,13 +3,6 @@ import RestaurantFinder from "../api/RestaurantFinder";
 import { useLocation, useParams, useHistory } from "react-router-dom";
 
 const AddReview = () => {
-<<<<<<< Updated upstream
-  const [name, setName] = useState('')
-  const [reviewText, setReviewText] = useState('')
-  const [rating, setRating] = useState('Rating')
-
-  //const handle
-=======
   const { id } = useParams();
   const location = useLocation();
   console.log(location);
@@ -19,7 +12,6 @@ const AddReview = () => {
   const [name, setName] = useState("");
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState("Rating");
->>>>>>> Stashed changes
 
   const handleSubmitReview = async (e) => {
     e.preventDefault();

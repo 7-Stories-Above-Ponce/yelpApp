@@ -16,12 +16,8 @@ const RestaurantDetailPage = () => {
     const fetchData = async () => {
       try {
         const response = await RestaurantFinder.get(`/${id}`);
-<<<<<<< Updated upstream
-        
-=======
         console.log(response);
 
->>>>>>> Stashed changes
         setSelectedRestaurant(response.data.data);
       } catch (err) {
         console.log(err);

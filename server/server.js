@@ -71,7 +71,7 @@ app.post("/api/v1/restaurants", async (req, res) => {
     );
     console.log(results);
     res.status(201).json({
-      status: "succes",
+      status: "success",
       data: {
         restaurant: results.rows[0],
       },
